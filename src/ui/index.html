@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pay Transparency Dashboard</title>
+  <meta name="description" content="Gender pay gap and EU Pay Transparency Directive analysis for a fictional company, Fernvale Systems.">
+  <!-- build:css -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- /build:css -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="bar">
+      <div class="brand">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="var(--accent)"/><path d="M8 19c0-6 4-10 12-11-1 8-5 12-11 12m0-1 6-6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        <h1>Pay Transparency<small>Fernvale Systems · fictional company</small></h1>
+      </div>
+      <div class="segmented" id="persona" role="group" aria-label="View as"></div>
+      <span class="badge accent" id="mode">Loading…</span>
+      <button type="button" class="btn" data-action="notice" aria-expanded="false">Data &amp; AI notice</button>
+      <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">◐</button>
+    </div>
+    <div class="filters"><div class="bar" id="filter-bar"></div></div>
+  </header>
+  <div id="notice"></div>
+  <main id="view"><div class="loading">Loading Fernvale Systems data…</div></main>
+
+  <!-- build:js -->
+  <script src="../data/generator.js"></script>
+  <script src="../core/stats.js"></script>
+  <script src="../core/model.js"></script>
+  <script src="../core/metrics.js"></script>
+  <script src="../core/regression.js"></script>
+  <script src="../core/bands.js"></script>
+  <script src="../core/privacy.js"></script>
+  <script src="../core/scenarios.js"></script>
+  <script src="../core/insights.js"></script>
+  <script src="../adapters/static.js"></script>
+  <script src="../adapters/sheets.js"></script>
+  <script src="ui.js"></script>
+  <script src="views/analyst.js"></script>
+  <script src="views/leadership.js"></script>
+  <script src="views/employee.js"></script>
+  <script src="app.js"></script>
+  <!-- /build:js -->
+</body>
+</html>

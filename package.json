@@ -1,0 +1,16 @@
+{
+  "name": "pay-transparency-dashboard",
+  "version": "1.0.0",
+  "description": "Gender pay gap and EU Pay Transparency Directive analysis for a fictional company. Static demo + Google Apps Script web app.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node tests/run.js",
+    "build": "node build/build.js",
+    "dev": "node build/serve.js src",
+    "preview": "npm run build && node build/serve.js dist/web",
+    "push": "npm run build && clasp push",
+    "deploy": "npm run push && clasp deploy --description \"$(date +%Y-%m-%d)\""
+  },
+  "engines": { "node": ">=18" }
+}
